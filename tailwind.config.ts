@@ -1,4 +1,5 @@
 import type { Config } from 'tailwindcss'
+import themes from "daisyui/src/theming/themes"
 
 export default {
   content: [],
@@ -27,6 +28,20 @@ export default {
         "accordion-slide-down": "accordion-slide-down 0.2s ease-out",
       }
     }
+  },
+  daisyui: {
+    themes: [{
+      light: {
+        ...themes["light"],
+        primary: "#FF3E15",
+        "primary-content": "#fff",
+        "success-content": "#fff",
+        "error-content": "#fff",
+
+        "--rounded-btn": "0.5rem",
+      }
+    }, "dark"],
+    logs: false,
   },
   plugins: [
     require("tailwindcss-animate"),
